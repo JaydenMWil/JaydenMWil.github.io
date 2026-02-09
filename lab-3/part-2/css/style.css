@@ -15,6 +15,20 @@ body {
     letter-spacing: 1px;
 }
 
+ol, ul, li {
+    line-height: 1.2;
+    margin: 0 auto;
+}
+
+ul {
+    list-style-image: url(../resource/cat_list.jpg);
+    list-style-type: square;
+}
+
+ol {
+    list-style-type: decimal;
+}
+
 h1, h2, h3, h4, h5, h6 {
     font-family: "Arvo", serif;
     font-weight: 700;
@@ -53,6 +67,7 @@ a[href^="http"]::after {
     background-size: 100%;
     background-image: url("../resource/external-link-52.png");
 }
+
 
 
 /* Layout */
