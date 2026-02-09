@@ -4,4 +4,25 @@ html {
 
 body {
     font: 1.2em / 1.5 system-ui;
+    padding: 20px;
+    width:500px;
+    background-color: #efefef;
+    margin: 0 auto;
+}
+
+ul {
+    background-color: white;
+    border-color: purple;
+    border-style: solid;
+    border-width: 5px;
+    padding: 30px;
+    border-radius:20px;
+}
+
+h1 {
+    color: darkslategray;
+    border-bottom-style: dotted;
+    border-bottom-width: 10px;
+    border-bottom-color: purple;
+    font-size: 2rem;
 }
