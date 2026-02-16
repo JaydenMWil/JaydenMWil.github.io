@@ -67,7 +67,6 @@ function generateStory() {
         newStory = newStory.replace("94 Fahrenheit",temperature)
     }
 
-    // TODO: replace "" with the correct expression
     story.textContent = newStory;
     story.style.visibility = "visible";
 }
