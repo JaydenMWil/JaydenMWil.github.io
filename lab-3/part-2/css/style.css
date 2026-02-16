@@ -6,33 +6,31 @@
 }
 
 body {
-    font-family: "Lora", serif;
-    line-height: 1.2;
     margin: 0 auto;
     padding: 0 20px;
     min-width: 980px;
     max-width: 1400px;
-    letter-spacing: 1px;
 }
 
-ol, ul, li {
-    line-height: 1.2;
-    margin: 0 auto;
+html {
+    font-family: "Lora", serif;
 }
 
-ul {
-    list-style-image: url(../resource/cat_list.jpg);
-    list-style-type: square;
+p {
+    line-height: 1.4;
+    font-size: 1rem;
+    letter-spacing: 1.1px;
 }
 
-ol {
-    list-style-type: decimal;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    font-family: "Arvo", serif;
+h1, h2 {
+    font-family: "Arvo", sans-serif;
     font-weight: 700;
-    letter-spacing: 1px;
+    font-size: 2rem;
+    letter-spacing: 2px;
+}
+
+h1 {
+    text-align: center;
 }
 
 h2 {
@@ -53,7 +51,7 @@ a:focus {
     outline: none;
 }
 
-.first-paragraph {
+section h2 + p {
     text-indent: 2rem;
 }
 
@@ -68,6 +66,19 @@ a[href^="http"]::after {
     background-image: url("../resource/external-link-52.png");
 }
 
+ol, ul, li {
+    line-height: 1.4;
+    margin: 0 auto;
+}
+
+ul {
+    list-style-type: square;
+}
+
+ol {
+    list-style-type: decimal;
+}
+
 
 
 /* Layout */
@@ -79,11 +90,32 @@ main {
     padding: 20px 0;
 }
 
+
+nav li {
+    list-style: none;
+}
+
+nav li a {
+    font-family: "Arvo", serif;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 3.5;
+
+    width: 100%;
+    border: #aa6666 solid 1px;
+    display: inline-block;
+    padding: 10px 10px;
+    text-align: center;
+    margin-bottom: 1rem;
+    text-decoration: none;
+    color: #aa6666;
+}
+
+
 /* header and footer */
 
 header {
     border-bottom: 5px solid #aa6666;
-    text-align: center;
 }
 
 footer {
