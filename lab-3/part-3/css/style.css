@@ -25,6 +25,9 @@ img {
 .grid {
     margin: 0 auto;
     max-width: 980px;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 20px;
     
 }
 
