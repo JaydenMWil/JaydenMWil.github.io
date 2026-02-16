@@ -25,6 +25,7 @@ img {
 .grid {
     margin: 0 auto;
     max-width: 980px;
+    
 }
 
 nav {
@@ -61,4 +62,7 @@ nav a {
 
 .feature {
     width: 200px;
+    float: left;
+    margin-right: 30px;
+    margin-bottom: 10px;
 }
