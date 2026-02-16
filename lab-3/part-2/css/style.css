@@ -17,7 +17,6 @@ html {
 }
 
 p {
-    line-height: 1.4;
     font-size: 1rem;
     letter-spacing: 1.1px;
 }
@@ -35,6 +34,9 @@ h1 {
 
 h2 {
     margin-bottom: 0;
+}
+a {
+    color: #cc6666;
 }
 
 a:visited {
@@ -66,9 +68,9 @@ a[href^="http"]::after {
     background-image: url("../resource/external-link-52.png");
 }
 
-ol, ul, li {
+p, ol, ul {
+    margin: 1em 0;
     line-height: 1.4;
-    margin: 0 auto;
 }
 
 ul {
@@ -99,6 +101,7 @@ nav li a {
     font-family: "Arvo", serif;
     font-weight: 700;
     font-size: 22px;
+    text-transform: uppercase;
     line-height: 3.5;
 
     width: 100%;
