@@ -42,7 +42,7 @@ function returnRandomStoryString() {
     they stared in horror for a few moments, then ${randomEvent}. 
     Bob saw the whole thing, but was not surprised — ${randomCharacter} weighs 300 pounds, 
     and it was a hot day.`
-    
+
     return storyText;
 }
 
@@ -50,9 +50,14 @@ function returnRandomStoryString() {
 
 generateBtn.addEventListener("click", generateStory);
 
+
+
 function generateStory() {
+    let newStory = returnRandomStoryString()
+
     if (customName.value !== "") {
         const name = customName.value;
+        newStory = newStory.replace("Bob",name)
     }
 
     if (document.getElementById("uk").checked) {
