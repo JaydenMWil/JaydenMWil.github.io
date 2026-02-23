@@ -14,8 +14,10 @@ const images = [
 ]
 
 
-function updateDisplayImage(img) {
-    displayedImage.src = img.target.src
+function updateDisplayImage(event) {
+    const currentImage = event.target;
+    displayedImage.src = currentImage.src;
+    displayedImage.alt = currentImage.alt;
 }
 
 
