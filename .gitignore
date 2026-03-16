@@ -1,4 +1,5 @@
 .idea
+*.pdf
 
 # Default ignored files
 /shelf/
@@ -10,3 +11,10 @@
 /dataSources.local.xml
 # Editor-based HTTP Client requests
 /httpRequests/
+lab-1/part-2/backup
+lab-2/part-2/test
+lab-3/part-2/backup
+lab-3/part-2/css backup
+lab-3/part-3/css/backup
+lab-3/part-2/resource/cat_list.jpg
+lab-3/part-2/resource/IMG_2486(1).heic
