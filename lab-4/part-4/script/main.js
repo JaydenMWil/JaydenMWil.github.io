@@ -2,9 +2,16 @@
 
 const canvas = document.querySelector('canvas');
 const ctx = canvas.getContext('2d');
+const ballCounter = document.querySelector('p');
 
 const width = (canvas.width = window.innerWidth);
 const height = (canvas.height = window.innerHeight);
+
+let ballCount = 0;
+
+function updateBallCounter() {
+  ballCounter.textContent = `Ball count: ${ballCount}`;
+}
 
 // function to generate random number
 
@@ -73,9 +80,11 @@ class Ball extends Shape {
   collisionDetect() {
     // loops through our lowkey poorly named array of balls for each ball
     for (const ball of balls) {
-      // checks if this (object) isnt equal to the current ball in the array, and if the ball in the array exists
+      // checks if this (object) isnt equal to the current ball in the array, and if the ball in the
+      // array exists
       if (!(this === ball) && ball.exists) {
-        // creates delta x and delta y, calculate by current ball's x or y and subtract the current balls x and y as well
+        // creates delta x and delta y, calculate by current ball's x or y and subtract the current
+        // balls x and y as well
         const dx = this.x - ball.x;
         const dy = this.y - ball.y;
         // calculates distance from the square root of dx * dx + dy * dy.
@@ -132,6 +141,7 @@ class EvilCircle extends Shape {
     ctx.lineWidth = 3;
   }
 
+  // mostly the same as the update function but it doesnt update the evil circle position after it checks
   checkBounds() {
     if (this.x + this.size >= width) {
       this.x -= this.size;
@@ -147,6 +157,9 @@ class EvilCircle extends Shape {
     }
   }
 
+  // same collision detection as before but now it doesnt check if this object is the same because it
+  // doesnt need to since this isnt in that array of balls, but it does check if the ball exists before
+  // being able to colide with it
   collisionDetect() {
     for (const ball of balls) {
       if (ball.exists) {
@@ -155,7 +168,10 @@ class EvilCircle extends Shape {
         const distance = Math.sqrt(dx * dx + dy * dy);
 
         if (distance < this.size + ball.size) {
+          // sets the ball's existance to false
           ball.exists = false;
+          ballCount--;
+          updateBallCounter();
         }
       }
     }
@@ -164,6 +180,7 @@ class EvilCircle extends Shape {
 
 const balls = [];
 
+// this is just a loop that fills the balls array
 while (balls.length < 25) {
   const size = random(10, 20);
   const ball = new Ball(
@@ -177,13 +194,20 @@ while (balls.length < 25) {
     size
   );
   balls.push(ball);
+  ballCount++;
+  updateBallCounter();
 }
 
+// instantiate the evil circle here, use random values for the x and y
 const evilguy = new EvilCircle(random(0, width), random(0, height));
+
+// this is the loop function that runs and updates the screen
 function loop() {
+  // this is what resets and reprints the screen before the ball movement
   ctx.fillStyle = 'rgb(0 0 0 / 25%)';
   ctx.fillRect(0, 0, width, height);
 
+  // makes each ball move and update (only if they exists)
   for (const ball of balls) {
     if (ball.exists) {
       ball.draw();
@@ -192,10 +216,12 @@ function loop() {
     }
   }
 
+  // this is where it updates the evil circle
   evilguy.draw();
   evilguy.checkBounds();
   evilguy.collisionDetect();
 
+  // i think this is the a built in function that calls this function again.
   requestAnimationFrame(loop);
 }
 
