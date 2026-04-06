@@ -141,36 +141,40 @@
 
       <div class="form-section">
         <h2>Any other feedback?</h2>
-
         <label for="comments">Give us your comments</label>
         <textarea
           id="comments"
           name="comments">
         </textarea>
       </div>
+
       <div class="form-section">
         <h2>Your details</h2>
+        <div class="separator">
+          <label for="name">Name</label>
+          <input
+            type="text"
+            id="name" />
+        </div>
 
         <div class="separator">
-          <label>
-            Name
-            <input type="text" />
-          </label>
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email" />
         </div>
+
         <div class="separator">
-          <label>
-            Email
-            <input type="email" />
-          </label>
-        </div>
-        <div class="separator">
-          <label>
-            Phone
-            <input type="tel" />
-          </label>
+          <label for="phone">Phone</label>
+          <input
+            type="tel"
+            id="phone" />
         </div>
       </div>
-      <div class="form-section">Submit</div>
+
+      <div class="form-section">
+        <button type="submit">Submit</button>
+      </div>
     </form>
   </body>
 </html>
