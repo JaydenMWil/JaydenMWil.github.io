@@ -39,32 +39,49 @@
         <fieldset>
             <legend>Were the beds</legend>
             <input type="radio" name="beds" checked/>
-            <label for="">Too hard?</label>
+            <label for="bed1">Too hard?</label>
             <input type="radio" name="beds"/>
-            <label for="">Too soft?</label>
+            <label for="bed2">Too soft?</label>
             <input type="radio" name="beds"/>
-            <label for="">Just right?</label>
+            <label for="bed3">Just right?</label>
         </fieldset>
         <fieldset>
             <legend>Describe the chairs (select all you agree with)</legend>
-            <input type="checkbox" name="chairs">Comfy
-            <input type="checkbox" name="chairs">Luxurious
-            <input type="checkbox" name="chairs">Hi tec
-            <input type="checkbox" name="chairs">Pretty
-            <input type="checkbox" name="chairs">Majestic
+            <input type="checkbox" name="chairs" value="comfy"/>
+            <label for="chair1">Comfy</label>
+            <input type="checkbox" name="chairs" value="luxurious"/>
+            <label for="chair2">Luxurious</label>
+            <input type="checkbox" name="chairs" value="hitec"/>
+            <label for="chair3">Hi tec</label>
+            <input type="checkbox" name="chairs" value="pretty"/>
+            <label for="chair4">Pretty</label>
+            <input type="checkbox" name="chairs" value="majestic"/>
+            <label for="chair5">Majestic</label>
         </fieldset>
         --
-        About your hosts
-        Who's your favorite bear?
-        Papa bear
-        Mama bear
-        Junior
-        Dozer
-        Which greeting did you prefer?
-        Wave
-        Friendly greeting
-        Growl
-        Claw marks in the door
+        <h2>About your hosts</h2>
+        <fieldset>
+            <legend>Who's your favorite bear?</legend>
+            <select name="bear_select" id="">
+                <option value="papa">
+                    <label for="bear1">Papa bear</label></option>
+                <option value="mama">
+                    <label for="bear2">Mama bear</label></option>
+                <option value="junior">
+                    <label for="bear3">Junior</label></option>
+                <option value="dozer">
+                    <label for="bear4">Dozer</label></option>
+            </select>
+        </fieldset>
+        <h2>Which greeting did you prefer?</h2>
+        <fieldset>
+            <select name="" id="">
+                <option value="">Wave</option>
+                <option value="">Friendly greeting</option>
+                <option value="">Growl</option>
+                <option value="">Claw marks in the door</option>
+            </select>
+        </fieldset>
         --
         Any other feedback?
         Give us your comments
