@@ -17,16 +17,19 @@
   --></head>
 
   <body>
+    <h1>We want your feedback!</h1>
     <p>
-      We want your feedback! We're very excited that you visited the little
-      house in the woods, and we want to hear what you thought of it! Please
-      fill in the below sections. You don't need to provide your name or contact
-      details, but if you do, we'll enter you into a prize draw where you'll
-      have a chance to win prizes.
+      We're very excited that you visited the
+      <a href="#">little house in the woods</a>, and we want to hear what you
+      thought of it! Please fill in the below sections. You don't need to
+      provide your name or contact details, but if you do, we'll enter you into
+      a <a href="#">prize draw</a> where you'll have a chance to win prizes.
+      <img
+        src="https://mdn.github.io/shared-assets/images/examples/learn/woodland-strip.jpg"
+        alt="" />
     </p>
 
     <form>
-      --
       <div class="form-section">
         <h2>Facilities</h2>
 
@@ -107,13 +110,12 @@
             id="chair5" /><label for="chair5">Majestic</label>
         </fieldset>
       </div>
-      --
+
       <div class="form-section">
         <h2>About your hosts</h2>
 
-        <fieldset>
+        <div class="separator">
           <label for="favourite">Who's your favorite bear?</label>
-
           <select
             name="favourite"
             id="favourite">
@@ -122,9 +124,9 @@
             <option value="junior">Junior</option>
             <option value="dozer">Dozer</option>
           </select>
-        </fieldset>
+        </div>
 
-        <fieldset>
+        <div class="separator">
           <label for="greetingpref">Which greeting did you prefer?</label>
           <select
             name="greetingpref"
@@ -134,9 +136,9 @@
             <option value="greeting3">Growl</option>
             <option value="greeting4">Claw marks in the door</option>
           </select>
-        </fieldset>
+        </div>
       </div>
-      --
+
       <div class="form-section">
         <h2>Any other feedback?</h2>
 
@@ -146,30 +148,29 @@
           name="comments">
         </textarea>
       </div>
-      --
       <div class="form-section">
         <h2>Your details</h2>
 
         <div class="separator">
-          <fieldset>
-            <label>
-              Name
-              <input type="text" />
-            </label>
-            <label>
-              Email
-              <input type="email" />
-            </label>
-            <label>
-              Phone
-              <input type="number" />
-            </label>
-          </fieldset>
+          <label>
+            Name
+            <input type="text" />
+          </label>
+        </div>
+        <div class="separator">
+          <label>
+            Email
+            <input type="email" />
+          </label>
+        </div>
+        <div class="separator">
+          <label>
+            Phone
+            <input type="tel" />
+          </label>
         </div>
       </div>
-      --
       <div class="form-section">Submit</div>
-      --
     </form>
   </body>
 </html>
