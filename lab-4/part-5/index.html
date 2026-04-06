@@ -1,99 +1,175 @@
 <!doctype html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="utf-8" />
     <title>Forms challenge</title>
-    <link href="css/style.css" rel="stylesheet" />
-    <script defer src="index.js"></script>
+    <link
+      href="css/style.css"
+      rel="stylesheet" />
+    <script
+      defer
+      src="index.js"></script>
     <!--
              Name: Jayden Wilson
              File: index.html
              Date: 6 April 2026
              This is Lab4, part5
-  -->
-</head>
+  --></head>
 
-<body>
+  <body>
     <p>
-        We want your feedback!
-        We're very excited that you visited the little house in the woods,
-        and we want to hear what you thought of it! Please fill in the below
-        sections. You don't need to provide your name or contact details, but
-        if you do, we'll enter you into a prize draw where you'll have a chance
-        to win prizes.
+      We want your feedback! We're very excited that you visited the little
+      house in the woods, and we want to hear what you thought of it! Please
+      fill in the below sections. You don't need to provide your name or contact
+      details, but if you do, we'll enter you into a prize draw where you'll
+      have a chance to win prizes.
     </p>
 
     <form>
-        --
+      --
+      <div class="form-section">
         <h2>Facilities</h2>
-        <fieldset>
-            <legend>Was the porridge</legend>
-            <input type="radio" name="porridge" value="hot" checked/>
-            <label for="porridge1">Too hot?</label>
-            <input type="radio" name="porridge" value="cold"/>
-            <label for="porridge2">Too cold?</label>
-            <input type="radio" name="porridge" value="right"/>
-            <label for="porridge3">Just right?</label>
-        </fieldset>
-        <fieldset>
-            <legend>Were the beds</legend>
-            <input type="radio" name="beds" checked/>
-            <label for="bed1">Too hard?</label>
-            <input type="radio" name="beds"/>
-            <label for="bed2">Too soft?</label>
-            <input type="radio" name="beds"/>
-            <label for="bed3">Just right?</label>
-        </fieldset>
-        <fieldset>
-            <legend>Describe the chairs (select all you agree with)</legend>
-            <input type="checkbox" name="chairs" value="comfy"/>
-            <label for="chair1">Comfy</label>
-            <input type="checkbox" name="chairs" value="luxurious"/>
-            <label for="chair2">Luxurious</label>
-            <input type="checkbox" name="chairs" value="hitec"/>
-            <label for="chair3">Hi tec</label>
-            <input type="checkbox" name="chairs" value="pretty"/>
-            <label for="chair4">Pretty</label>
-            <input type="checkbox" name="chairs" value="majestic"/>
-            <label for="chair5">Majestic</label>
-        </fieldset>
-        --
-        <h2>About your hosts</h2>
-        <fieldset>
-            <legend>Who's your favorite bear?</legend>
-            <select name="bear_select" id="">
-                <option value="papa">
-                    <label for="bear1">Papa bear</label></option>
-                <option value="mama">
-                    <label for="bear2">Mama bear</label></option>
-                <option value="junior">
-                    <label for="bear3">Junior</label></option>
-                <option value="dozer">
-                    <label for="bear4">Dozer</label></option>
-            </select>
-        </fieldset>
-        <h2>Which greeting did you prefer?</h2>
-        <fieldset>
-            <select name="" id="">
-                <option value="">Wave</option>
-                <option value="">Friendly greeting</option>
-                <option value="">Growl</option>
-                <option value="">Claw marks in the door</option>
-            </select>
-        </fieldset>
-        --
-        Any other feedback?
-        Give us your comments
-        --
-        Your details
-        Name
-        Email
-        Phone
-        --
-        Submit
-        --
-    </form>
-</body>
 
+        <fieldset>
+          <legend>Was the porridge</legend>
+          <input
+            type="radio"
+            name="porridge"
+            value="hot"
+            id="porridge1"
+            checked /><label for="porridge1">Too hot?</label>
+
+          <input
+            type="radio"
+            name="porridge"
+            value="cold"
+            id="porridge2" /><label for="porridge2">Too cold?</label>
+
+          <input
+            type="radio"
+            name="porridge"
+            value="right"
+            id="porridge3" /><label for="porridge3">Just right?</label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Were the beds</legend>
+          <input
+            type="radio"
+            name="beds"
+            value="hard"
+            id="bed1"
+            checked /><label for="bed1">Too hard?</label>
+
+          <input
+            type="radio"
+            name="beds"
+            value="soft"
+            id="bed2" /><label for="bed2">Too soft?</label>
+
+          <input
+            type="radio"
+            name="beds"
+            value="right"
+            id="bed3" /><label for="bed3">Just right?</label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Describe the chairs (select all you agree with)</legend>
+          <input
+            type="checkbox"
+            name="chairs"
+            value="comfy"
+            id="chair1" /><label for="chair1">Comfy</label>
+
+          <input
+            type="checkbox"
+            name="chairs"
+            value="luxurious"
+            id="chair2" /><label for="chair2">Luxurious</label>
+
+          <input
+            type="checkbox"
+            name="chairs"
+            value="hitec"
+            id="chair3" /><label for="chair3">Hi tec</label>
+
+          <input
+            type="checkbox"
+            name="chairs"
+            value="pretty"
+            id="chair4" /><label for="chair4">Pretty</label>
+
+          <input
+            type="checkbox"
+            name="chairs"
+            value="majestic"
+            id="chair5" /><label for="chair5">Majestic</label>
+        </fieldset>
+      </div>
+      --
+      <div class="form-section">
+        <h2>About your hosts</h2>
+
+        <fieldset>
+          <label for="favourite">Who's your favorite bear?</label>
+
+          <select
+            name="favourite"
+            id="favourite">
+            <option value="papa">Papa bear</option>
+            <option value="mama">Mama bear</option>
+            <option value="junior">Junior</option>
+            <option value="dozer">Dozer</option>
+          </select>
+        </fieldset>
+
+        <fieldset>
+          <label for="greetingpref">Which greeting did you prefer?</label>
+          <select
+            name="greetingpref"
+            id="greetingpref">
+            <option value="greeting1">Wave</option>
+            <option value="greeting2">Friendly greeting</option>
+            <option value="greeting3">Growl</option>
+            <option value="greeting4">Claw marks in the door</option>
+          </select>
+        </fieldset>
+      </div>
+      --
+      <div class="form-section">
+        <h2>Any other feedback?</h2>
+
+        <label for="comments">Give us your comments</label>
+        <textarea
+          id="comments"
+          name="comments">
+        </textarea>
+      </div>
+      --
+      <div class="form-section">
+        <h2>Your details</h2>
+
+        <div class="separator">
+          <fieldset>
+            <label>
+              Name
+              <input type="text" />
+            </label>
+            <label>
+              Email
+              <input type="email" />
+            </label>
+            <label>
+              Phone
+              <input type="number" />
+            </label>
+          </fieldset>
+        </div>
+      </div>
+      --
+      <div class="form-section">Submit</div>
+      --
+    </form>
+  </body>
 </html>
