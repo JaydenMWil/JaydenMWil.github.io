@@ -6,15 +6,14 @@ const focusedImage = document.querySelector(".focused");
 const baseURL = "/lab-4/part-2/images/"
 
 btn.addEventListener("click", () => {
-    if (btn.className === "dark") {
-        btn.setAttribute("class", "light");
+    if (btn.classList.contains("dark")) {
         btn.textContent = "Lighten";
         overlay.style.backgroundColor = `rgb(0 0 0 / 0.5)`;
     } else {
-        btn.setAttribute("class", "dark");
         btn.textContent = "Darken";
         overlay.style.backgroundColor = `rgb(0 0 0 / 0)`;
     }
+    btn.classList.toggle("dark")
 });
 
 const images = [
@@ -34,7 +33,7 @@ function updateDisplayImage(event) {
 
 
 
-let counter = 1
+// let counter = 1
 for (let image of images) {
     let img = document.createElement("img");
     img.src = baseURL + image.filename;
@@ -42,8 +41,8 @@ for (let image of images) {
     img.style.width = "100%";
     img.style.height = "100%";
     img.style.objectFit = "cover";
-    img.tabIndex = counter;
-    counter += 1;
+    img.tabIndex = 0;
+    // counter += 1;
     img.addEventListener("click",updateDisplayImage);
     img.addEventListener("keydown", (KeyEvent) => {
         if (KeyEvent.code === "Enter") {

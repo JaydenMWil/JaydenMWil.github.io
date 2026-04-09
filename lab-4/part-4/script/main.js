@@ -103,7 +103,7 @@ class Ball extends Shape {
 class EvilCircle extends Shape {
   // evil class inheriting Shape's
   // constructor has x, y, velX, velY, color, and size
-  constructor(x, y, velX, velY, color, size) {
+  constructor(x, y) {
     // inherits the x,y from the shape class, it also sets the velx and vely to 20
     super(x, y, 20, 20);
     // set the color to white
