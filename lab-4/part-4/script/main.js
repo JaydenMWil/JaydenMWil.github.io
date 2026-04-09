@@ -1,8 +1,8 @@
 // setup canvas
 
-const canvas = document.querySelector('canvas');
-const ctx = canvas.getContext('2d');
-const ballCounter = document.querySelector('p');
+const canvas = document.querySelector("canvas");
+const ctx = canvas.getContext("2d");
+const ballCounter = document.querySelector("p");
 
 const width = (canvas.width = window.innerWidth);
 const height = (canvas.height = window.innerHeight);
@@ -102,30 +102,29 @@ class Ball extends Shape {
 
 class EvilCircle extends Shape {
   // evil class inheriting Shape's
-  // constructor has x, y, velX, velY, color, and size
   constructor(x, y) {
     // inherits the x,y from the shape class, it also sets the velx and vely to 20
     super(x, y, 20, 20);
     // set the color to white
-    this.color = 'white';
+    this.color = "white";
     // set the size to ten
     this.size = 10;
     // in this constructor we are adding an eventlistener for a keydown to this object we create,
     // this is tied to the objects creation and we call this lambda method that is a switch case
     // that checks the keyboard event "e" for the wasd keys, and moves the character in that direction
     // (i.e a is left, d is right, etc)
-    window.addEventListener('keydown', (e) => {
+    window.addEventListener("keydown", (e) => {
       switch (e.key) {
-        case 'a':
+        case "a":
           this.x -= this.velX;
           break;
-        case 'd':
+        case "d":
           this.x += this.velX;
           break;
-        case 'w':
+        case "w":
           this.y -= this.velY;
           break;
-        case 's':
+        case "s":
           this.y += this.velY;
           break;
       }
@@ -191,7 +190,7 @@ while (balls.length < 25) {
     random(-7, 7),
     random(-7, 7),
     randomRGB(),
-    size
+    size,
   );
   balls.push(ball);
   ballCount++;
@@ -204,7 +203,7 @@ const evilguy = new EvilCircle(random(0, width), random(0, height));
 // this is the loop function that runs and updates the screen
 function loop() {
   // this is what resets and reprints the screen before the ball movement
-  ctx.fillStyle = 'rgb(0 0 0 / 25%)';
+  ctx.fillStyle = "rgb(0 0 0 / 25%)";
   ctx.fillRect(0, 0, width, height);
 
   // makes each ball move and update (only if they exists)
