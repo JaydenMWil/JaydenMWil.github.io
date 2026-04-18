@@ -51,8 +51,11 @@ p, li, table {
 
 /* || header layout */
 
+
 div[class="nav"], article, footer, .secondary {
-  background-color: green;
+  /* Current Contrast Ratio with green is 2.79:1*/
+  /* After Contrast Ratio with white is 14.35:1*/
+  background-color: white;
 }
 
 article, footer, .secondary {
