@@ -38,7 +38,8 @@
     <form class="search">
       <input type="search"
              name="q"
-             placeholder="Search query">
+             placeholder="Search query"
+             aria-label="Search query">
       <input type="submit"
              value="Go!">
     </form>
@@ -69,14 +70,15 @@
         out below. The below table also gives you some useful facts about bears.
       </p>
       <table>
+        <caption>A comparison table of urban vs wild bears</caption>
         <thead>
           <tr>
-            <td>Bear Type</td>
-            <td>Coat</td>
-            <td>Adult size</td>
-            <td>Habitat</td>
-            <td>Lifespan</td>
-            <td>Diet</td>
+            <th>Bear Type</th>
+            <th>Coat</th>
+            <th>Adult size</th>
+            <th>Habitat</th>
+            <th>Lifespan</th>
+            <th>Diet</th>
           </tr>
         </thead>
         <tbody>
@@ -136,11 +138,15 @@
       </p>
       <audio controls>
         <source src="media/bear.mp3"
-                type="audio/mp3">
+                type="audio/mp3"
+                alt="this isnt really an audio">
         <source src="media/bear.ogg"
                 type="audio/ogg">
-        <p>It looks like your browser doesn't support HTML5 audio players.</p>
+        <p>It looks like your browser doesn't support HTML5 audio players. <a href="media/bear.mp3">Download the audio
+            file here</a>.</p>
       </audio>
+
+      <p><a href="media/bear_transcript.txt">Read the text transcript of the audio clip</a></p>
 
       <aside>
 
@@ -155,7 +161,7 @@
 
       </aside>
       <section class="comments">
-        <div class="show-hide">Show comments</div>
+        <button class="show-hide">Show comments</button>
 
         <div class="comment-wrapper">
 
@@ -163,14 +169,14 @@
 
           <form class="comment-form">
             <div class="flex-pair">
-              Your name:
+              <label for="name">Your name:</label>
               <input type="text"
                      name="name"
                      id="name"
                      placeholder="Enter your name">
             </div>
             <div class="flex-pair">
-              Your comment:
+              <label for="comment">Your comment:</label>
               <input type="text"
                      name="comment"
                      id="comment"
